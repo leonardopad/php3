@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block titulo %}{% endblock %}
+
+{% block cabecalho %}
+    {{ parent() }}
+    <style type="text/css">-
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block conteudo %}
+<div class="container">
+    <form action="/registrar" method="POST">
+        Nome: <input type="text" name="nome"> <br>
+        Email: <input type="email" name="email"> <br>
+        Senha: <input type="password" name="senha">  <br>
+        <input class="btn btn-success" type="submit" value="Cadastrar">
+    </form>
+</div>
+{% endblock %}
